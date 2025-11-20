@@ -45,7 +45,7 @@ def clean_json_text(text):
 # ------------------------------
 # Streamlit UI
 # ------------------------------
-st.title("💡 InvoicePasa - Extract Info from Your Invoice")
+st.title("💡 InvoiceParser - Extract Info from Your Invoice")
 st.write("""
 Upload your invoice (PDF or Image) and get a clean structured JSON output.
 Extract details like invoice number, narration, amounts, customer info, and line items automatically.
