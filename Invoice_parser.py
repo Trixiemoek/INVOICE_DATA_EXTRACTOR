@@ -8,7 +8,7 @@ import json
 # Load Gemini API Key from Streamlit Secrets
 # ------------------------------
 # On Streamlit Cloud, add gemini_api in the Secrets tab (Settings → Secrets)
-api_key = os.environ.get("gemini_api")
+api_key = st.secrets["gemini_api"]
 
 if not api_key:
     st.error("❌ Gemini API key not found in Streamlit Secrets.")
