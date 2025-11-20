@@ -2,17 +2,16 @@ import streamlit as st
 import google.generativeai as genai
 import os
 import mimetypes
-from dotenv import load_dotenv
 import json
 
 # ------------------------------
-# Load Gemini API Key
+# Load Gemini API Key from Streamlit Secrets
 # ------------------------------
-load_dotenv()
-api_key = os.getenv("gemini_api")
+# On Streamlit Cloud, add gemini_api in the Secrets tab (Settings → Secrets)
+api_key = os.environ.get("gemini_api")
 
 if not api_key:
-    st.error("❌ Gemini API key not found in .env file.")
+    st.error("❌ Gemini API key not found in Streamlit Secrets.")
     st.stop()
 
 genai.configure(api_key=api_key)
